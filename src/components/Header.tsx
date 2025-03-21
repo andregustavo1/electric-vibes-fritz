@@ -34,7 +34,7 @@ const Header: React.FC = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-black border-b border-neon-pink/30 shadow-neon-pink/20 py-3' 
+          ? 'bg-fritz-black/95 backdrop-blur-lg border-b border-neon-pink/30 shadow-neon-pink/20 py-3' 
           : 'bg-transparent py-6'
       }`}
     >
