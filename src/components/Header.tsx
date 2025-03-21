@@ -1,21 +1,9 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Header: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -32,11 +20,7 @@ const Header: React.FC = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-fritz-black/95 backdrop-blur-lg border-b border-neon-pink/30 shadow-neon-pink/20 py-3' 
-          : 'bg-transparent py-6'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-fritz-black/95 backdrop-blur-lg border-b border-neon-pink/30 shadow-neon-pink/20 py-3"
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <a href="#home" className="text-2xl font-heading font-bold text-white relative z-10">
