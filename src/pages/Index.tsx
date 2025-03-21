@@ -5,6 +5,7 @@ import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Features from "../components/Features";
+import Gallery from "../components/Gallery";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
@@ -47,6 +48,7 @@ const Index = () => {
       <AboutSection />
       <WhyChooseUs />
       <Features />
+      <Gallery />
       <ContactSection 
         phoneNumber={contactInfo.phoneNumber}
         email={contactInfo.email}
